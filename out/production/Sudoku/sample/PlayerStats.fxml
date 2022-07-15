@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1.0">
+                    <image>
+                        <Image url="@img/sudoku14.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" translateX="100.0">
+               <image>
+                  <Image url="@img/red-dragon.png" />
+               </image>
+            </ImageView>
+                <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="178.0">
+                    <image>
+                        <Image url="@img/sudoku14_2.png" />
+                    </image>
+                </ImageView>
+            </children></HBox>
+    </top>
+    <bottom>
+        <HBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/sudoku15.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="169.0">
+                    <image>
+                        <Image url="@img/sudoku15_2.png" />
+                    </image>
+                </ImageView>
+            </children></HBox>
+    </bottom>
+    <center>
+        <VBox prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane maxHeight="500.0" maxWidth="400.0" translateX="50.0" translateY="50.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="450.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" onMouseClicked="#backToMenuPS" pickOnBounds="true" preserveRatio="true" translateX="171.0" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@img/red-arrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button fx:id="goBackPlayerStats" disable="true" mnemonicParsing="false" visible="false" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" translateX="70.0" translateY="-100.0">
+                     <image>
+                        <Image url="@img/victory.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="250.0" translateY="-100.0">
+                     <image>
+                        <Image url="@img/defeat.jpg" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
