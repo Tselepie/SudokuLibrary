@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="125.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1.0">
+                    <image>
+                        <Image url="@img/sudoku14.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="125.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="112.0">
+               <image>
+                  <Image url="@img/red-dragon.png" />
+               </image>
+            </ImageView>
+                <ImageView fitHeight="125.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="197.0">
+                    <image>
+                        <Image url="@img/sudoku14_2.png" />
+                    </image>
+                </ImageView>
+            </children></HBox>
+    </top>
+    <bottom>
+        <HBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/sudoku15.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="233.0">
+                    <image>
+                        <Image url="@img/sudoku15_2.png" />
+                    </image>
+                </ImageView>
+            </children></HBox>
+    </bottom>
+    <center>
+        <VBox prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefHeight="600.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="481.0" minHeight="10.0" prefHeight="477.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                  <TextArea editable="false" maxHeight="400.0" maxWidth="550.0" text="-SUDOKU-&#10;&#10;Sudoku is played on a grid of 9 x 9 spaces. Within the rows and &#10;columns are 9 “squares” (made up of 3 x 3 spaces). Each row, &#10;column and square (9 spaces each) needs to be filled out with the&#10;numbers 1-9, without repeating any numbers within the row, &#10;column or square. Does it sound complicated? As you can see from &#10;the image below of an actual Sudoku grid, each Sudoku grid comes &#10;with a few spaces already filled in; the more spaces filled in, &#10;the easier the game – the more difficult Sudoku puzzles have &#10;very few spaces that are already filled in.When you start a game &#10;of Sudoku, some blocks will be pre-filled for you. You cannot &#10;change these numbers in the course of the game.&#10;&#10;-KILLER SUDOKU-&#10;&#10;Killer Sudoku is a mix of Sudoku and Kakuro. Your goal is the &#10;same as in regular sudoku: fill every row, column and 3x3 region &#10;with the numbers 1-9 once. The difference is how you arrive at &#10;those numbers.In killer sudoku, no numbers will be filled in &#10;at the start. An in addition to the rows, columns and 3x3 &#10;regions, every cell is also a part of a cage, indicated by &#10;different colors. Each of these cages has a sum, and you must &#10;work out what numbers to put in each cell based on the sum of&#10;the cage. Each cell in a cage is added up and must match the sum &#10;of that cage.&#10;&#10;-DUIDOKU-&#10;&#10;Follow the rules of SUDOKU to play moves, taking turns with the &#10;AI. The winner is the last player to make a valid move." translateX="27.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" onMouseClicked="#backToMenuR" pickOnBounds="true" preserveRatio="true" translateX="272.0" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@img/red-arrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button fx:id="goBackRules" disable="true" mnemonicParsing="false" visible="false" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
